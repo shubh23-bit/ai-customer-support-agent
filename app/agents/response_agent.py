@@ -5,21 +5,28 @@ def generate_response(state):
     category=state["category"]
     sentiment=state["sentiment"]
     email=state["email"]
-
+    context=state["context"]
+    memory="\n".join(state["memory"])
+    
     prompt=f"""
+    you are professional  AI supoort agent.
 
-you are profrssionl customer supoort agent
+    Previous customer history
+    {memory}
 
-customer Email:
-{email}
+    COMPANY POLICY
+    {context}
+    
+    customer Email:
+    {email}
 
-cateogry:
-{category}
+    cateogry:
+    {category}
 
-sentiment:
-{sentiment}
+    sentiment:
+    {sentiment}
 
-Genratw a professional response email.
+Genrate a professional support response.
 """
     response=llm.invoke(prompt)
     state["response"]=response.content

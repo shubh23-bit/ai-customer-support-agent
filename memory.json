@@ -1,0 +1,6 @@
+{
+    "cust_101": [
+        "\n    EMAIL: Why is my refund delayed?\n    CATEGORY: refund\n    SENTIMENT: neutral\n    ",
+        "\n    EMAIL: Why is my refund still pending?\n    CATEGORY: refund\n    SENTIMENT: neutral\n    "
+    ]
+}
